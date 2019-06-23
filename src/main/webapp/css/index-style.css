@@ -1,0 +1,9 @@
+@charset "BIG5";
+
+html { background-color: #3b3b3b; }
+
+#content {
+	margin: 40px;
+	color: white;
+	font-size: 24px;
+}

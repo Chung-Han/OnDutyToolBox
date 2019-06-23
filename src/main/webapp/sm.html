@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>SM</title>
+<link rel="stylesheet" href="css/sm-style.css">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	crossorigin="anonymous">
+	
+</script>
+<script type="text/javascript">
+	function myFunction() {
+		$.ajax({
+			type : "post",
+			url : "DataServlet", //url of DataServlet.java
+			success : function(data) {
+				document.getElementById("mem").innerHTML = data;
+			}
+		});
+	}
+</script>
+</head>
+<body>
+	<div id="mem">
+		<h1>Current SM Memory: {{sm_server_memory}} Mb</h1>
+		<form action="DataServlet" method="post">
+			<div>
+				<input type="text" name="driverUrl" value="oracle.jdbc.OracleDriver">
+				<input type="text" name="connString" value="jdbc:oracle:thin:@localhost:1521:xe">
+				<input type="text" name="username" value="HR">
+				<input type="text" name="password" value="HR">
+				<input type="text" name="sql" value="select * from employees t">
+				<input type="submit" value="submit">
+			</div>
+		</form>
+	</div>
+</body>
+</html>

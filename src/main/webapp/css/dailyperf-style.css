@@ -1,0 +1,18 @@
+#accordion {
+	font-size: 18px;
+}
+
+.ui-state-focus {
+	outline: none;
+}
+
+.ui-state-default {
+	background-color: #3173a5;
+	background-image: none;
+	border: 0px;
+}
+
+#accordion h3 {
+	background: none;
+	background-color: #757575;
+}
